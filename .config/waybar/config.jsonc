@@ -1,0 +1,139 @@
+{
+    "layer": "top",
+    "output": "eDP-1",
+    "position": "bottom",
+    "height": 30,
+    "exclusive": true,
+    "modules-left": [
+        "wlr/taskbar"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "tray",
+        "wireplumber",
+        "memory",
+        "battery",
+        "clock"
+    ],
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "tooltip": true,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "icon-size": 21,
+    },
+    "tray": {
+        "icon-size": 19,
+        "spacing": 10,
+    },
+    "network": {
+        "interfaces": [
+            "wlp0s20f3"
+        ],
+        "tooltip": true,
+        "rotate": 0,
+        "format-ethernet": "󰈁",
+        "format-wifi": "{icon}",
+        "format-icons": [
+            "󰤯 ", // No signal
+            "󰤟 ", // Low
+            "󰤢 ", // Medium
+            "󰤥 ", // Good
+            "󰤨 " // Excellent
+        ],
+        "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>",
+        "format-linked": "󰈁",
+        "format-disconnected": "󰌙 ",
+        "tooltip-format-disconnected": "Disconnected",
+        "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
+        "interval": 2,
+        "on-click": "",
+    },
+    "hyprland/workspaces": {
+        "format": "{name}: {icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "active": "",
+            "default": ""
+        },
+        "persistent-workspaces": {
+            "*": 5, // 5 workspaces by default on every monitor
+            "HDMI-A-1": 3 // but only three on HDMI-A-1
+        },
+    },
+    "memory": {
+        "interval": 10,
+        "format": "{percentage}% 󰍛 ",
+        "tooltip": true,
+        "tooltip-format": "Memory Usage: {used} / {total}\nAvailable: {avail}\nSwap Used: {swapUsed} / {swapTotal}",
+        "on-click": "kitty --class=\"btop\" \"btop\"",
+    },
+    "battery": {
+        "interval": 30,
+        "tooltip": true,
+        "tooltip-format": "Battery: {capacity}%\n{timeTo}",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": {
+            "default": [
+                "󰂎 ",
+                "󰁺 ",
+                "󰁻 ",
+                "󰁼 ",
+                "󰁽 ",
+                "󰁾 ",
+                "󰁿 ",
+                "󰂀 ",
+                "󰂁 ",
+                "󰂂 ",
+                "󰁹 "
+            ],
+            "charging": [
+                "󰢟 ",
+                "󰢜 ",
+                "󰂆 ",
+                "󰂇 ",
+                "󰂈 ",
+                "󰢝 ",
+                "󰂉 ",
+                "󰢞 ",
+                "󰂊 ",
+                "󰂋 ",
+                "󰂅 "
+            ]
+        },
+    },
+    "clock": {
+        "interval": 1,
+        "format": "{:%H:%M}  ",
+        "tooltip-format": "{:%A, %A %d, %Y (%R)} ",
+        "tooltip": true,
+        "format-alt": "{:%Y-%m-%d %H:%M:%S} ",
+    },
+    "wireplumber": {
+       "tooltip": true,
+        "tooltip-format": "Audio: {node_name}\nVolume: {volume}%",
+        "format": "{volume}% {icon}",
+        "format-muted": "󰖁 ",
+        "on-click": "helvum",
+        "format-icons": [
+            " ",
+            " ",
+            " "
+        ],
+        "scroll-step": 0.2,
+        "max-volume": 150,
+        "reverse-scrolling": true,
+    },
+    "reload_style_on_change": true,
+}

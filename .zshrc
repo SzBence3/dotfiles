@@ -119,4 +119,3 @@ alias vim="nvim"
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # bind accept suggestion to Alt+L
-bindkey '^L' autosuggest-accept

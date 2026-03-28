@@ -1,0 +1,56 @@
+[fullscreen]
+    # Keeps notifications visible even during gaming/movies
+    fullscreen = show
+
+[global]
+    ### Core Logic (Your Settings) ###
+    enable_posix_regex = true
+    sort = update
+    layer = overlay
+    show_indicators = true
+    
+    ### Hyprland Geometry & Layout ###
+    # Gap between notifications
+    gap_size = 5
+    width = 300
+    height = 110
+    offset = 20x20
+    origin = top-right
+    padding = 12
+    horizontal_padding = 15
+    frame_width = 2
+    
+    ### Progress Bar Styling ###
+    progress_bar = true
+    progress_bar_height = 10
+    progress_bar_frame_width = 1
+    # Your preference: Sharp progress bar inside rounded window
+    progress_bar_corner_radius = 0
+    
+    ### Rounding & Fonts ###
+    # Matches standard Hyprland window rounding
+    corner_radius = 10
+    font = JetBrainsMono Nerd Font 10
+    # Your format string
+    format = "<b>%s %p</b>\n%b"
+
+    ### Colors (Hyprland / Catppuccin Style) ###
+    separator_color = frame
+
+[urgency_low]
+    background = "#1E1E2E"
+    foreground = "#CDD6F4"
+    frame_color = "#89B4FA"
+    timeout = 5
+
+[urgency_normal]
+    background = "#1E1E2E"
+    foreground = "#CDD6F4"
+    frame_color = "#CBA6F7" 
+    timeout = 10
+
+[urgency_critical]
+    background = "#1E1E2E"
+    foreground = "#CDD6F4"
+    frame_color = "#F38BA8"
+    timeout = 0

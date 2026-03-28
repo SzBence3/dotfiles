@@ -1,0 +1,85 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", sans-serif;
+    font-size: 14px;
+}
+
+/* Bar background and foreground */
+window#waybar {
+    background: #232634;
+    color: #cdd6f4;
+    border-radius: 10px;
+    padding: 4px 12px;
+    border: 1px solid #181825;
+    margin: 6px 12px;
+}
+
+#tray {
+    background: #313244;
+    color: #cdd6f4;
+    border-radius: 5px;
+    padding: 4px 10px;
+    margin: 0 3px;
+    border: none;
+}
+
+#tray > .passive,
+#tray > .active {
+    background: #45475a;
+    color: #cdd6f4;
+    border-radius: 5px;
+    padding: 4px 28px;
+    margin: 0 5px;
+    border: none;
+    min-width: 92px; /* Try increasing this value */
+}
+
+#taskbar button,
+#workspaces button
+{
+    background: #313244;
+    color: #cdd6f4;
+    border-radius: 2px;
+    padding: 4px 10px;
+    margin: 0 2px;
+    border: none;
+    transition: background 0.2s, color 0.2s;
+}
+#taskbar button.active,
+#workspaces button.active {
+    font-weight: bold;
+    background: #45475a; /* Slightly lighter */
+    border-bottom: 3px solid #89b4fa; /* Bluish underline */
+}
+
+tooltip label,
+.tooltip label,
+window > tooltip label {
+    color: #cdd6f4;
+    font-size: 13px;
+}
+
+tooltip, .tooltip,
+window > tooltip{
+    background: #181825 ;
+    color: #cdd6f4;
+    border-radius: 6px;
+    padding: 6px 12px;
+    border: 1px solid #313244;
+    font-size: 13px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+#memory, #battery, #clock, #wireplumber{
+    background: #313244;
+    border-radius: 5px;
+    padding: 4px 5px;
+    margin: 0 3px;
+    border: none;
+}
+
+#battery.warning {
+    color: orange;
+}
+#battery.critical {
+    color: red;
+}
