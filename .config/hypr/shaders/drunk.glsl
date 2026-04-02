@@ -10,7 +10,7 @@ out vec4 fragColor;
 
 
 void main() {
-vec2 newTexcoord = v_texcoord + vec2(sin(v_texcoord.y * 30.0) * 0.01, sin(v_texcoord.x * 30.0) * 0.01);
+vec2 newTexcoord = v_texcoord + vec2(sin(v_texcoord.y * 20.0) * 0.02, sin(v_texcoord.x * 20.0) * 0.02);
 
     vec4 pixColor = texture(tex, newTexcoord);
 
